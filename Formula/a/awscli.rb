@@ -3,20 +3,19 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/refs/tags/2.16.10.tar.gz"
-  sha256 "f26e8c09624941d1a7d3d5413b3516244549561449c567dd4cccdecfd2317353"
+  url "https://github.com/aws/aws-cli/archive/refs/tags/2.17.5.tar.gz"
+  sha256 "eaa711efc9f6dc6fde3f14f1f497e03da1470c5176bb90e55360ae5545c62838"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "5ef06676fe22326a03fe01330a20c43b436de80e20adf6068dd81e1978e80539"
-    sha256 cellar: :any,                 arm64_ventura:  "f06e279242318883665a628d268f8be1b47032c10da568178948483a355e342a"
-    sha256 cellar: :any,                 arm64_monterey: "a46218b10445e950bbb539c60d4741a2110291eec28661131114d66efed51781"
-    sha256 cellar: :any,                 sonoma:         "f2a61fb82b10692bace67f7c70f834f78978dff6ba43aafbc583811603263f25"
-    sha256 cellar: :any,                 ventura:        "b9377472433f52aa246cf439d1bfabf1c30069d018e5de518c193f32d036a93f"
-    sha256 cellar: :any,                 monterey:       "c5877ba44b0a201ac5278aa344e9c554aa568d0ec208824aa6f2076ce56f13c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a16bf22ab2db13d0d581849535a340ae944d8e32ffe33ae1a6c6b159760a3805"
+    sha256 cellar: :any,                 arm64_sonoma:   "02e88ac5cd1c4ef227190295d7d74b449730959061c008dbbe491e9e5f2ba755"
+    sha256 cellar: :any,                 arm64_ventura:  "8e5b7f05d76ba9acc06af9ec1c7084f7af91ad3514616e0eca07fb4afafab842"
+    sha256 cellar: :any,                 arm64_monterey: "380b674d2ecc133661997bdfef853beabb9aaf8873831c7fcc8b4d51b9bc2c21"
+    sha256 cellar: :any,                 sonoma:         "76df2bc33fb9d7603496a39730f11ec2340dc8ac846561dc34069f81d8ddd449"
+    sha256 cellar: :any,                 ventura:        "20dad0ccdc1535158889883fcf959c6a95bbd1039991bd23ca774a12eb046859"
+    sha256 cellar: :any,                 monterey:       "0841a1ec13b3fad6115f123ddfc3576319af08a9b644bef66ad91a59aa327cea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a707889d063981050d5ef226114888e27e7b57332dff1b9d36d56ab0cf3aff11"
   end
 
   # `pkg-config`, `rust`, and `openssl@3` are for cryptography.

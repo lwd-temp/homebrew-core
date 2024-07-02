@@ -3,25 +3,26 @@ class SigmaCli < Formula
 
   desc "CLI based on pySigma"
   homepage "https://github.com/SigmaHQ/sigma-cli"
-  url "https://files.pythonhosted.org/packages/cf/45/eef555a909ff716108ded653decf0a7642bc80169fff9590b665638164a0/sigma_cli-1.0.2.tar.gz"
-  sha256 "8cb46dca0c5787969f33152c3cd085989fbc07a121d1c9a795664f7264c7ce9f"
+  url "https://files.pythonhosted.org/packages/70/e8/6a4e6aa2875494af43483a37c1715039d42a0ba54cb1353db5c3ebfded69/sigma_cli-1.0.4.tar.gz"
+  sha256 "30db40f7b6ea1cff8da5c03668ee37326fa371fa343129455741a6b8b68d81b2"
   license "LGPL-2.1-or-later"
-  revision 2
   head "https://github.com/SigmaHQ/sigma-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "8308c708b3d61fdeaa7b9f402a2c4e5c0664e2aa875c95e21ee6ebc45d667500"
-    sha256 cellar: :any,                 arm64_ventura:  "8444a39e56dc7239098832979db7060c1977fa00ac713244a285b7592a8a11d3"
-    sha256 cellar: :any,                 arm64_monterey: "72247e103de549b6eb45fda35085aabecbbb327188391bcf8b37ba2ddb95c9ff"
-    sha256 cellar: :any,                 sonoma:         "d0176290a77452ee1789d81b4c683d6938e2fc1a1acc49bdaa3b7abed5a8fda4"
-    sha256 cellar: :any,                 ventura:        "43e484f47132d4e9d322bf154e995ec5e4dab3fe6ef3d9cfe513179c17f1b517"
-    sha256 cellar: :any,                 monterey:       "3861946819d20409b0c819b8231352192187f63a7d389e1abef6f7c35ce38c16"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba3e5a62c4ee4c48faeb573a36774eccd9cd05331c35f38cea3d055fa8167615"
+    sha256 cellar: :any,                 arm64_sonoma:   "8439a0c2a45aaa1c899a5c0daadbacbae71b77147de663e7295f30cc78c2586a"
+    sha256 cellar: :any,                 arm64_ventura:  "6ef0b391bacd8cdd3f9cf96109dd6ae7bc41dd2f995eeb2798101927c7d2c51f"
+    sha256 cellar: :any,                 arm64_monterey: "18a93186e5c90b33d2052d22c334bfcd262cd1024eef11a615b7b36c5471d860"
+    sha256 cellar: :any,                 sonoma:         "61cf79d3604c52ec4f2495ca812785f7d9685cc65eea3e7c04c1f74855b88ba0"
+    sha256 cellar: :any,                 ventura:        "3e944f8927af1cbe15748a9c104f092a699aae778c67f958fd844d754cc72b34"
+    sha256 cellar: :any,                 monterey:       "0e618b15b6b2a0dc9e6bae2b7009bdfc569a473529b3cd8cda2b15b67146f052"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8785e69d0ae9286667a6163af0b0d5f2d7721353c785a65b57ccc2c50eb4b06"
   end
 
   depends_on "certifi"
   depends_on "libyaml"
   depends_on "python@3.12"
+
+  conflicts_with "open-simh", because: "both install `sigma` binaries"
 
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
@@ -69,8 +70,8 @@ class SigmaCli < Formula
   end
 
   resource "pysigma" do
-    url "https://files.pythonhosted.org/packages/dd/6b/964e015e1ef78647696eddf6ca58807f1c3ef409f26d9c0601db7b3b86dc/pysigma-0.11.7.tar.gz"
-    sha256 "0414db911bdb8aea11967e64a53da4288b869374135ee81a0e5e3658c7a79eb6"
+    url "https://files.pythonhosted.org/packages/47/32/19ab0e65b24f2e65f7409485065697abf93e5e8e9807a52e7eff81054470/pysigma-0.11.8.tar.gz"
+    sha256 "08ae6d134567960c39a1907c9111504a1a4cdbabe71555c1f62f7d67a6228298"
   end
 
   resource "pysigma-backend-sqlite" do

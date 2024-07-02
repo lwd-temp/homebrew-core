@@ -3,20 +3,19 @@ class CodecovCli < Formula
 
   desc "Codecov's command-line interface"
   homepage "https://cli.codecov.io/"
-  url "https://files.pythonhosted.org/packages/96/73/e18aaee2b3638528cfbece0615c34a59489f9063413744a31149558a0645/codecov-cli-0.6.0.tar.gz"
-  sha256 "25d23c14d99f58c071d1db4d78aa9774a7407054cef49ca676ad805d1daaefe1"
+  url "https://files.pythonhosted.org/packages/fa/f1/daea230aceead1973be73df60173ba3f416d1931f7f5cb34b94ea8f4f83e/codecov-cli-0.7.2.tar.gz"
+  sha256 "e755bca56404472c078255258854b5feca0b322f1ce613b140d193995e0a1bdc"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/codecov/codecov-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "8e975dfbd498fddd22e79962ee11e602aa513c3d1f640af5d1b65cd7f6d62276"
-    sha256 cellar: :any,                 arm64_ventura:  "cff035dba90bc12da01a53bbd086cfdbc2bd733d4ed185021edbf227fd5084a1"
-    sha256 cellar: :any,                 arm64_monterey: "ead3bea04825b2d9591c8f5e195150b514d3ca6041f7da3efd5133ca568789ff"
-    sha256 cellar: :any,                 sonoma:         "9ca8ac37fbde4dbd2d68e3aa9823e3cfa403ddd1813a7f43ee481b6c80b3c993"
-    sha256 cellar: :any,                 ventura:        "0b43db0f5791a3e80418b5158c758d4754a14ece2a1f0d3628b05c85e853e7a5"
-    sha256 cellar: :any,                 monterey:       "e0c1e5af8f97a8b755cf2ae3b8cbe5a21a45bc50f1c84923db5a2600a1f4ff9b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3cbd543ebfdaec24eac3ea268925274a76180e5684aab4de509fc4ba521d722a"
+    sha256 cellar: :any,                 arm64_sonoma:   "5f954b8c265ed9b86adba987336a0decd0ff7869d443e2eaf9918c53762a662c"
+    sha256 cellar: :any,                 arm64_ventura:  "9cca954a70b8e1b3c5f8cd0d69d700f412bd0b343a8b4518c72160df41b79fe2"
+    sha256 cellar: :any,                 arm64_monterey: "86f7da3dcd0d21bf9f0c20623124098307b503ccaef50f86a10223e3d5994562"
+    sha256 cellar: :any,                 sonoma:         "95e7b8cac2fb83d130b9d23453635a4ec86e1abed697ad3e38287d337d8def70"
+    sha256 cellar: :any,                 ventura:        "cad5cb5ddcd363ff36fc346da6c554f28fef2ad4ce59722c44a321fb121b90a5"
+    sha256 cellar: :any,                 monterey:       "a33342f512762528e9750e8da9cdad50f4628e34d764e1db130bd688ebc34939"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5e536ab92bc574729cf2628b79c20cc0a0ab607ad3b62ba2ee16dadf5449767f"
   end
 
   depends_on "rust" => :build
@@ -94,8 +93,8 @@ class CodecovCli < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/aa/60/5db2249526c9b453c5bb8b9f6965fcab0ddb7f40ad734420b3b421f7da44/setuptools-70.0.0.tar.gz"
-    sha256 "f211a66637b8fa059bb28183da127d4e86396c991a942b028c6650d4319c3fd0"
+    url "https://files.pythonhosted.org/packages/0d/9d/c587bea18a7e40099857015baee4cece7aca32cd404af953bdeb95ac8e47/setuptools-70.1.1.tar.gz"
+    sha256 "937a48c7cdb7a21eb53cd7f9b59e525503aa8abaf3584c730dc5f7a5bec3a650"
   end
 
   resource "sniffio" do
@@ -116,12 +115,6 @@ class CodecovCli < Formula
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
     sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
-  end
-
-  # Fix SyntaxWarning's on python 3.12: https://github.com/codecov/codecov-cli/pull/458
-  patch do
-    url "https://github.com/codecov/codecov-cli/commit/ef2f435e01559ae85ec4db0c41b8377214b4f3c5.patch?full_index=1"
-    sha256 "ba394ec6df7f368d2a8ddbb69cfbeec7b91e96d1077e3b551dad95d1db257d8e"
   end
 
   def install

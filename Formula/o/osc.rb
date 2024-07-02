@@ -3,10 +3,9 @@ class Osc < Formula
 
   desc "Command-line interface to work with an Open Build Service"
   homepage "https://openbuildservice.org"
-  url "https://github.com/openSUSE/osc/archive/refs/tags/1.7.0.tar.gz"
-  sha256 "326f8e58ccc12c99a26059a60bd52c0bd3226ad5676224fbfcbf9d53ee248ac4"
+  url "https://github.com/openSUSE/osc/archive/refs/tags/1.8.1.tar.gz"
+  sha256 "f4954b294d919cafdebcaee5036bceefc5b7ba532c1bf1b1c6952d859fecb8f6"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://github.com/openSUSE/osc.git", branch: "master"
 
   livecheck do
@@ -15,13 +14,13 @@ class Osc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "7002d843aab52352061045e4471e303bf69ad1ae631f924d3223c5892151eb0f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7002d843aab52352061045e4471e303bf69ad1ae631f924d3223c5892151eb0f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7002d843aab52352061045e4471e303bf69ad1ae631f924d3223c5892151eb0f"
-    sha256 cellar: :any_skip_relocation, sonoma:         "609299d08116b5cb729ea783dba92d5e8784fb6b009430ea27ae3cda3036180f"
-    sha256 cellar: :any_skip_relocation, ventura:        "609299d08116b5cb729ea783dba92d5e8784fb6b009430ea27ae3cda3036180f"
-    sha256 cellar: :any_skip_relocation, monterey:       "609299d08116b5cb729ea783dba92d5e8784fb6b009430ea27ae3cda3036180f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf4b6cc557186707ed6f144a8d0ad5389103fa604ec095e08e95461fd0f8e4c6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "eaadc0a41578ed333ec392d6dd78754f1c2f9063a2ebf360bffbaf9594b10d77"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "eaadc0a41578ed333ec392d6dd78754f1c2f9063a2ebf360bffbaf9594b10d77"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "eaadc0a41578ed333ec392d6dd78754f1c2f9063a2ebf360bffbaf9594b10d77"
+    sha256 cellar: :any_skip_relocation, sonoma:         "7ab032d69264b6b3a2d2a46ab978ca021c7c2d32ad01ead9d2b0d0fee63dc0f9"
+    sha256 cellar: :any_skip_relocation, ventura:        "7ab032d69264b6b3a2d2a46ab978ca021c7c2d32ad01ead9d2b0d0fee63dc0f9"
+    sha256 cellar: :any_skip_relocation, monterey:       "7ab032d69264b6b3a2d2a46ab978ca021c7c2d32ad01ead9d2b0d0fee63dc0f9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6aa3079576d19d49ff56bc418278027599ab1af4278eabb21d464395f1576b71"
   end
 
   depends_on "cryptography"
